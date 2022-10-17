@@ -2,7 +2,7 @@ var cartValue = document.getElementById("cart-value");
 var cartButton = document.getElementById("cart");
 
 var addButtons = document.getElementsByClassName("button");
-
+let bill="";
 var items = [
   {
     name: "This was our pact",
@@ -127,16 +127,13 @@ cartButton.onclick = () => {
 
   for (let index = 0; index < items.length; index++) {
     if (items[index].quantity != 0) {
-      console.log(
-        "Item name: " +
-          items[index].name +
-          " - Quantity: " +
-          items[index].quantity
-      );
+      bill+="Item name: " +items[index].name +" - Quantity: "+items[index].quantity + " \n ";
     }
   }
 
-  console.log(
-    "The total amount is " + finalDollars + "$ and " + finalCents + " cents"
-  );
+  bill+="\n The total amount is "+finalDollars+"$ and "+finalCents+" cents";
+
+    console.log(bill);
+
+  window.open( `https://wa.me/+919000000000/?text=${bill}`, '_blank');
 };
