@@ -135,5 +135,5 @@ cartButton.onclick = () => {
 
     console.log(bill);
 
-  window.open( `https://wa.me/+919000000000/?text=${bill}`, '_blank');
+  window.open( `https://wa.me/+919000000000/?text=Order details: ${bill}`, '_blank');
 };
